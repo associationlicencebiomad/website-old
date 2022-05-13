@@ -5,14 +5,20 @@ import { render } from 'react-dom';
 import { createInertiaApp } from '@inertiajs/inertia-react';
 import { InertiaProgress } from '@inertiajs/progress';
 
+import DefaultLayout from './Layouts/DefaultLayout';
+
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
-    resolve: (name) => require(`./Pages/${name}`),
+    resolve: (name) => {
+		const page = require(`./Pages/${name}`).default;
+		page.layout = page.layout || DefaultLayout;
+		return page
+	},
     setup({ el, App, props }) {
         return render(<App {...props} />, el);
     },
 });
 
-InertiaProgress.init({ color: '#4B5563' });
+InertiaProgress.init({ showSpinner: true, color: '#4B5563' });
