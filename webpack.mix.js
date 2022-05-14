@@ -12,12 +12,13 @@ const mix = require('laravel-mix');
  */
 
 mix.ts('resources/js/app.tsx', 'public/js')
-    .react()
-    .alias({
-        '@': 'resources/js',
-    })
-	.sourceMaps();
+	.react()
+	.alias({
+		'@': 'resources/js',
+	})
+	.sourceMaps()
+	.disableNotifications();
 
 if (mix.inProduction()) {
-    mix.version();
+	mix.version();
 }

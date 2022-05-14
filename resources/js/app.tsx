@@ -6,6 +6,7 @@ import { createInertiaApp } from '@inertiajs/inertia-react';
 import { InertiaProgress } from '@inertiajs/progress';
 
 import DefaultLayout from './Layouts/DefaultLayout';
+import './app.scss';
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
@@ -21,4 +22,4 @@ createInertiaApp({
     },
 });
 
-InertiaProgress.init({ showSpinner: true, color: '#4B5563' });
+InertiaProgress.init({ color: '#434C5E' });
