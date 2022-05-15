@@ -1,8 +1,8 @@
 import { Link } from "@inertiajs/inertia-react";
 import React, { MouseEventHandler } from "react";
-import { RiSettings4Line, RiUserLine } from "react-icons/ri";
-import { MdLogout } from "react-icons/md";
-
+import { RiSettings4Line } from "react-icons-all-files/ri/RiSettings4Line";
+import { RiUserLine } from "react-icons-all-files/ri/RiUserLine";
+import { MdLogout } from "react-icons-all-files/md/MdLogout";
 
 type HeaderDropdownProps = {
 	open: boolean;

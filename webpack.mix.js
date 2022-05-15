@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+require('intervi-mix');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -17,6 +19,7 @@ mix.ts('resources/js/app.tsx', 'public/js')
 		'@': 'resources/js',
 	})
 	.sourceMaps()
+	.useInterviSvgLoader()
 	.disableNotifications();
 
 if (mix.inProduction()) {

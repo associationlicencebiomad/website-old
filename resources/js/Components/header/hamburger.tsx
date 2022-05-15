@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons-all-files/gi/GiHamburgerMenu";
 
 
 type HeaderHamburgerProps = {
